@@ -158,7 +158,7 @@ class TrainModel():
         # Evaluate the model on the test data using `evaluate`
         PrintsForUser.printProcess('\n# Evaluate on test data')
         results = model.evaluate(testX, testY, batch_size=32)
-        PrintsForUser.printProcess('test loss, test acc:' + results)
+        print('test loss ' + str(results[0])  + ' , test acc ' + str(results[1]))        
         
         
         # save the model to disk
