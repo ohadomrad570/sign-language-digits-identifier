@@ -13,6 +13,7 @@ import train_model
 import classify
 import Cheak_Dir
 import PrintsForUser
+import consts
 import random   
 
 def options():
@@ -134,11 +135,11 @@ def menu():
     """
     #directories_file.create_directories_file()
     
-    data_set = r"C:\Users\ilano\OneDrive\Desktop\images"
-    sorted_data_path = r"C:\Users\ilano\OneDrive\Desktop\Data"
-    model_path = r"C:\Users\ilano\OneDrive\Desktop\model_3_data_10.model"
-    labels_path = r"C:\Users\ilano\OneDrive\Desktop\lb_3_data_10.pickle"
-    new_images_folder = r"C:\Users\ilano\OneDrive\Desktop\MyHand"
+    data_set = consts.data_Set
+    sorted_data_path = consts.sorted_data_path
+    model_path = consts.model_path
+    labels_path = consts.labels_path
+    new_images_folder = consts.new_images_folder
     
     while(flag):
         PrintsForUser.printOptions("--> Your Choice: ")
