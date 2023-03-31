@@ -6,7 +6,7 @@ this file contain a class with a static method
 this method declared the model layers
 """
 from keras.models import Sequential
-from keras.layers.normalization import BatchNormalization
+from tensorflow.keras.layers import BatchNormalization
 from keras.layers.convolutional import Conv2D
 from keras.layers.convolutional import MaxPooling2D
 from keras.layers.core import Activation
