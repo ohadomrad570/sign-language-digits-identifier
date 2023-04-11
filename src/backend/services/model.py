@@ -1,10 +1,3 @@
-"""
-by Ohad Omrad
-"""
-"""
-this file contain a class with a static method
-this method declared the model layers
-"""
 from keras.models import Sequential
 from tensorflow.keras.layers import BatchNormalization
 from keras.layers.convolutional import Conv2D

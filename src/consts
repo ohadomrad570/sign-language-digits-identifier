@@ -1,5 +1,0 @@
-data_set = r"C:\Users\ilano\OneDrive\Desktop\images"
-sorted_data_path = r"C:\Users\ilano\OneDrive\Desktop\Data"
-model_path = r"C:\Users\ilano\OneDrive\Desktop\model_3_data_10.model"
-labels_path = r"C:\Users\ilano\OneDrive\Desktop\lb_3_data_10.pickle"
-new_images_folder = r"C:\Users\ilano\OneDrive\Desktop\MyHand"

@@ -1,13 +1,3 @@
-"""
-by Ohad Omrad
-"""
-
-
-"""
-this python file handle the classify section
-"""
-
-# import the necessary packages
 from tensorflow.keras.utils import img_to_array
 from keras.models import load_model
 import numpy as np
@@ -15,8 +5,7 @@ import imutils
 import pickle
 import cv2
 import os
-
-import PrintsForUser
+import logger
 
 IMAGE_SIZE = (50,50)
 
@@ -46,7 +35,7 @@ class ImagePredictor():
         """
         load the trained convolutional neural network and the label binarizer
         """
-        PrintsForUser.printProcess("[INFO] Loading network...")
+        logger.info("[INFO] Loading network...")
         
         self.__model = load_model(self.__model_path)
         self.__lb = pickle.loads(open(self.__labels_path, "rb").read())
@@ -78,7 +67,7 @@ class ImagePredictor():
               2 -> copy of the image
         """
         # classify the input image
-        PrintsForUser.printProcess("[INFO] Classifying image...")
+        logger.info("[INFO] Classifying image...")
         proba = self.__model.predict(image_arr)[0]
         idx = np.argmax(proba)
         label = self.__lb.classes_[idx]
@@ -99,7 +88,7 @@ class ImagePredictor():
         cv2.putText(output, label, (10, 25),  cv2.FONT_HERSHEY_SIMPLEX,	0.7, (0, 255, 0), 2)
         
         # show the output image
-        PrintsForUser.printProcess("[INFO] {}".format(label))
+        logger.info("[INFO] {}".format(label))
         cv2.imshow("Output", output)
         cv2.waitKey(0)    
 
